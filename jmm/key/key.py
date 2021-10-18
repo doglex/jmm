@@ -1,9 +1,10 @@
 """
 返回私人token
 """
+from os import path
 
 
-def get_token(filename="token.key"):
+def get_token(filename=path.join(path.dirname(path.realpath(__file__)), "token.key")):
     with open(filename, "rt") as f:
         return f.readline().strip()
 
