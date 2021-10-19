@@ -1,4 +1,5 @@
 from jmm.util.tushare_util import pro
+import pandas as pd
 
 df = pro.stock_basic(**{
     "ts_code": "",
@@ -16,8 +17,17 @@ df = pro.stock_basic(**{
     "area",
     "industry",
     "market",
-    "list_date"
+    "list_date",
+    "fullname",
+    "enname",
+    "cnspell",
+    "exchange",
+    "curr_type",
+    "list_status",
+    "delist_date",
+    "is_hs"
 ])
-print(df)
 
+assert isinstance(df, pd.DataFrame)
+df.to_excel("metaList.xlsx")
 
