@@ -18,13 +18,6 @@ df = pro.stock_basic(**{
     "industry",
     "market",
     "list_date",
-    "fullname",
-    "enname",
-    "cnspell",
-    "exchange",
-    "curr_type",
-    "list_status",
-    "delist_date",
     "is_hs"
 ])
 
